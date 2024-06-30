@@ -11,13 +11,14 @@ public class Main {
 
 
 
-        Object[] arr1 = {"Alpha", "Bravo", "Bravo", "Charlie", "Delta", "Echo", 1, 2, ((char) 6000), ((char) 6000), ((char) 6000) };
+        Object[] arr1 = {"Alpha", "Bravo", "Bravo", "Charlie", "Delta", "Echo", 1, 2, ((char) 6000), ((char) 6000), ((char) 6000)};
 
 
 
         Map<Object,Long> map = Arrays.stream(arr1)
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         System.out.println(map);
+        //Output: {ᝰ=3, 1=1, 2=1, Echo=1, Delta=1, Charlie=1, Alpha=1, Bravo=2}
 
     }
 }
